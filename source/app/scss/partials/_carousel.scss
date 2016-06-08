@@ -1,0 +1,64 @@
+.carousel {
+  margin: 0 auto;
+  padding-top: 15px;
+  max-width: 400px;
+  width: 100%;
+
+  &__content {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  .carousel-indicators &__indicators {
+    background-color: darkgrey;
+    border: 0 none;
+    height: 20px;
+    width: 20px;
+    &.active {
+      background-color: #0074D9;
+      margin: 1px;
+    }
+  }
+
+  &__navigation.carousel-control {
+    background-image: none;
+    width: 10%;
+    span {
+      color: #0074D9;
+      text-shadow: none;
+    }
+  }
+
+  &__price {
+    background-color: #0074D9;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    height: 90px;
+    line-height: 16px;
+    padding-top: 25px;
+    position: absolute;
+    right: 2px;
+    text-align: center;
+    top: 15px;
+    width: 90px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+.carousel-indicators {
+  bottom: unset;
+  left: unset;
+  margin: 0 auto;
+  position: relative;
+}

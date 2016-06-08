@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="carousel slide" data-ride="carousel" id="haymarket-carousel">
+            <ol class="carousel-indicators">
+                {{#each items}}
+                    <li data-target="#haymarket-carousel" data-slide-to="{{@key}}"
+                        class="carousel__indicators {{#if @first}}active{{/if}}"></li>
+                {{/each}}
+            </ol>
+
+            <div class="carousel-inner carousel__content" role="listbox">
+                {{#each items}}
+                    <div class="item {{#if @first}}active{{/if}}">
+                        <img class="carousel__image" src="{{image}}" alt="{{title}}">
+                        <div class="carousel__price">
+                            {{price_formatter price}} <br> Buy now
+                        </div>
+                        <div>
+                            <p class="carousel__title">{{title}}</p>
+                            <p>{{description}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            <a class="left carousel-control carousel__navigation" href="#haymarket-carousel" role="button"
+               data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control carousel__navigation" href="#haymarket-carousel" role="button"
+               data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>

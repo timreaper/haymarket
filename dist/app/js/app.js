@@ -1,0 +1,1 @@
+Handlebars.registerHelper("price_formatter",function(a){var n=a;return n/=100,"£"+n}),$(window).load(function(){main.load_carousel()});var main=new function(){var a=this;a.data={},this.load_carousel=function(){$.getJSON("merchandise.json",function(n){a.data=n,$("#page").html(Haymarket.main(a.data)),$(function(){$("#haymarket-carousel").carousel()})})}};
